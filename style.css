@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Development Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Image Styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px; /* Keeps images rounded in other sections */
+        }
+
+        .interests-grid, .vacation-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .interest-item {
+            text-align: center;
+        }
+
+        .interest-item img {
+            width: 100%;  /* Ensure the image uses the full width available in the grid item */
+            height: auto;  /* Maintain natural aspect ratio */
+            margin-bottom: 10px;
+            border-radius: 0;  /* Remove any rounding, keeping the original shape */
+        }
+
+        .vacation-images img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Vacation Section */
+        .vacation-section {
+            padding: 40px 20px;
+            background-color: #f0f0f0;
+            border-radius: 12px;
+            max-width: 1000px;
+            margin: 40px auto;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .vacation-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .vacation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            justify-items: center;
+        }
+
+        .vacation-item {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Adjusted for a more balanced look */
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .vacation-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* Hover Effects */
+        .vacation-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .vacation-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Text Container */
+        .vacation-text {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1.5em; /* Adjusted font size */
+            font-weight: 700;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 8px 15px; /* Slightly smaller padding */
+            border-radius: 8px;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+        }
+
+        .vacation-item:hover .vacation-text {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: translateX(-50%) translateY(-10px);
+        }
+
+        .vacation-label {
+            font-size: 1.2em;  /* Adjusted for better readability */
+            margin-top: 10px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Spacing and Text Layout Adjustments */
+        .vacation-item .vacation-text p {
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
