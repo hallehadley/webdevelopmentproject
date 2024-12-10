@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Development Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #FFF4F2;
+            color: #333333;
+            padding: 20px 40px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+        }
+
+        section h2 {
+            color: #222;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Image Styling */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+        }
+
+        .interests-grid, .vacation-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .interest-item {
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .interest-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .interest-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .interest-item p {
+            margin-top: 10px;
+            font-size: 1.1em;
+            color: #444;
+        }
+
+        .interest-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .vacation-images img {
+            max-width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Web Development Project</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#section1">About Me</a></li>
+            <li><a href="#section2">JavaScript Demo</a></li>
+            <li><a href="#section3">Interests</a></li>
+            <li><a href="#section5">Vacations</a></li>
+            <li><a href="#section6">Joke Generator</a></li>
+            <li><a href="#section4">Conclusion</a></li>
+        </ul>
+    </nav>
+
+    <section id="section1">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <p>Hi! I'm Halle Hadley, a sophomore at Brigham Young University. I hope to study communications with a sports media emphasis! I'm excited to see where my time at BYU will take me!</p>
+            <img src="../Final/Me.png" alt="Halle Hadley">
+        </div>
+    </section>
+
+    <section id="section2">
+        <h2>JavaScript Demo</h2>
+        <p>This section demonstrates JavaScript interactivity. Try clicking the buttons below:</p>
+        <button onclick="showMessage()">Click Me for a Message</button>
+        <button onclick="changeBackgroundColor()">Change Background Color</button>
+    </section>
+
+    <section id="section3">
+        <h2>Interests</h2>
+        <div class="interests-grid">
+            <div class="interest-item">
+                <img src="../Final/Basketball.png" alt="Playing Sports">
+                <p>Playing sports</p>
+            </div>
+            <div class="interest-item">
+                <img src="../Final/Sushi.png" alt="Sushi">
+                <p>Sushi</p>
+            </div>
+            <div class="interest-item">
+                <img src="../Final/Florida_Travel.png" alt="Traveling">
+                <p>Traveling and exploring new places</p>
+            </div>
+            <div class="interest-item">
+                <img src="../Final/River.png" alt="Outdoors">
+                <p>Anything outdoors related</p>
+            </div>
+            <div class="interest-item">
+                <img src="../Final/Sundance_Skiing.png" alt="Skiing">
+                <p>Skiing</p>
+            </div>
+            <div class="interest-item">
+                <img src="../Final/LSU_Image.jpg" alt="College Football">
+                <p>College Football (Geaux Tigers)</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="section5" class="vacation-section">
+        <h2>My Favorite Vacation Spots</h2>
+        <div class="vacation-grid">
+            <div class="vacation-item">
+                <img src="../Final/New_York.png" alt="New York">
+                <div class="vacation-text">
+                    <p>New York</p>
+                </div>
+            </div>
+            <div class="vacation-item">
+                <img src="../Final/Hawaii.png" alt="Hawaii">
+                <div class="vacation-text">
+                    <p>Hawaii</p>
+                </div>
+            </div>
+            <div class="vacation-item">
+                <img src="../Final/Yellowstone.png" alt="Yellowstone">
+                <div class="vacation-text">
+                    <p>Yellowstone</p>
+                </div>
+            </div>
+            <div class="vacation-item">
+                <img src="../Final/Niagara_Falls.png" alt="Niagara Falls">
+                <div class="vacation-text">
+                    <p>Niagara Falls</p>
+                </div>
+            </div>
+            <div class="vacation-item">
+                <img src="../Final/Diamondhead.png" alt="Diamondhead">
+                <div class="vacation-text">
+                    <p>Diamondhead</p>
+                </div>
+            </div>
+            <div class="vacation-item">
+                <img src="../Final/Cruise.png" alt="Ensenada">
+                <div class="vacation-text">
+                    <p>Ensenada</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <section id="section6">
+        <h2>Web App: Joke Generator</h2>
+        <button id="jokeButton" onclick="getJoke()">Get a Joke!</button>
+        <p id="jokeOutput"></p>
+    </section>
+    
+
+    <section id="section4">
+        <h2>Conclusion</h2>
+        <p>Thank you for visiting my interactive webpage! I hope you enjoyed the demo and the fun joke generator. Feel free to try the buttons again or explore more sections.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Web Development Project. All Rights Reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
